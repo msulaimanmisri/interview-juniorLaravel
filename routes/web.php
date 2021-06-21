@@ -20,7 +20,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Company
-Route::get('/company', [CompanyController::class, 'index'])->name('company.index');
-Route::get('/company/create', [CompanyController::class, 'create'])->name('company.create');
-Route::get('/company/show', [CompanyController::class, 'show']);
-Route::get('/company/update', [CompanyController::class, 'update']);
+Route::resource('/company', CompanyController::class);
