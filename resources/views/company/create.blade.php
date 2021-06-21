@@ -10,6 +10,8 @@
                 <form action="{{ route('company.index') }}" method="POST" class="form-group"
                     enctype="multipart/form-data">
 
+                    @csrf
+
                     <label for="name" class="form-label">{{ ucwords('name') }}</label>
                     <input type="text" name="name" id="name" class="form-control mb-3">
 

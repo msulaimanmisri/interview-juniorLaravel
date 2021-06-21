@@ -22,18 +22,20 @@
         </thead>
 
         <tbody>
+            @foreach ($companies as $company)
             <tr>
                 <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>https://sulaimanmisri.com</td>
+                <td>{{ $company->name }}</td>
+                <td>{{ $company->email }}</td>
+                <td>{{ $company->logo }}</td>
+                <td>{{ $company->website }}</td>
                 <td>
                     <a href="#" class="btn btn-primary btn-sm"> View </a>
                     <a href="#" class="btn btn-outline-danger btn-sm"> Delete </a>
 
                 </td>
             </tr>
+            @endforeach
         </tbody>
     </table>
 

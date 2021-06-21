@@ -14,7 +14,8 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        return view('company.index');
+        $companies = Company::all();
+        return view('company.index')->with('companies', $companies);
     }
 
     /**
@@ -35,7 +36,7 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        $company = Company::Create([
+        $companies = Company::Create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'logo' => $request->input('logo'),
