@@ -35,7 +35,14 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $company = Company::Create([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'logo' => $request->input('logo'),
+            'website' => $request->input('website'),
+        ]);
+
+        return redirect('/company');
     }
 
     /**
