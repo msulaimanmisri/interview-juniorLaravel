@@ -29,11 +29,12 @@
                 <td>{{ $data->first_name }}</td>
                 <td>{{ $data->last_name }}</td>
                 <td>{{ $data->company }}</td>
-                <td>{{ $data->website }}</td>
+                <td>{{ $data->email }}</td>
+                <td>{{ $data->phone }}</td>
                 <td>
-                    <a href="/company/{{ $data->id }}" class="btn btn-primary btn-sm"> View </a>
+                    <a href="/staff/{{ $data->id }}" class="btn btn-primary btn-sm"> View </a>
 
-                    <form action="/company/{{ $data->id }}" method="POST">
+                    <form action="/staff/{{ $data->id }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-outline-danger btn-sm"> Delete </button>
