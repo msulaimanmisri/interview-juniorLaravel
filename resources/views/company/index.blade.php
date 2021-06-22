@@ -31,7 +31,12 @@
                 <td>{{ $company->website }}</td>
                 <td>
                     <a href="/company/{{ $company->id }}" class="btn btn-primary btn-sm"> View </a>
-                    <a href="/company/" class="btn btn-outline-danger btn-sm"> Delete </a>
+
+                    <form action="/company/{{ $company->id }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-outline-danger btn-sm"> Delete </button>
+                    </form>
                 </td>
             </tr>
             @endforeach
