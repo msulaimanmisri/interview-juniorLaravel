@@ -30,9 +30,8 @@
                 <td>{{ $company->logo }}</td>
                 <td>{{ $company->website }}</td>
                 <td>
-                    <a href="#" class="btn btn-primary btn-sm"> View </a>
-                    <a href="#" class="btn btn-outline-danger btn-sm"> Delete </a>
-
+                    <a href="/company/{{ $company->id }}" class="btn btn-primary btn-sm"> View </a>
+                    <a href="/company/" class="btn btn-outline-danger btn-sm"> Delete </a>
                 </td>
             </tr>
             @endforeach
