@@ -57,7 +57,7 @@ class StaffController extends Controller
     public function show($id)
     {
         $staff = Staff::find($id);
-        return view('staff.view')->with('staff', $staff);
+        return view('staff.show')->with('staff', $staff);
     }
 
     /**
@@ -81,7 +81,15 @@ class StaffController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $staff = Staff::where('id', $id)->update([
+            'first_name' => $request->input('first_name'),
+            'last_name' => $request->input('last_name'),
+            'company' => $request->input('company'),
+            'email' => $request->input('email'),
+            'phone' => $request->input('phone'),
+        ]);
+
+        return redirect('/staff');
     }
 
     /**
@@ -90,8 +98,9 @@ class StaffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Staff $staff)
     {
-        //
+        $staff->delete();
+        return redirect('/staff');
     }
 }
