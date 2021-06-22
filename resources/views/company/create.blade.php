@@ -22,7 +22,8 @@
                     <input type="file" class="form-control mb-3" id="logo" name="logo" />
 
                     <label for="website" class="form-label">{{ ucwords('website') }}</label>
-                    <input type="website" name="website" id="website" class="form-control mb-3">
+                    <input type="website" name="website" id="website" class="form-control mb-3"
+                        placeholder="https://sulaimanmisri.com">
 
                     <div>
                         <button class="btn btn-primary" type="submit" name="submit" id="submit"> Create </button>
