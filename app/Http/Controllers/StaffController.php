@@ -56,7 +56,8 @@ class StaffController extends Controller
      */
     public function show($id)
     {
-        //
+        $staff = Staff::find($id);
+        return view('staff.view')->with('staff', $staff);
     }
 
     /**
@@ -67,7 +68,8 @@ class StaffController extends Controller
      */
     public function edit($id)
     {
-        //
+        $staff = Staff::find($id);
+        return view('staff.edit')->with(['staff' => $staff]);
     }
 
     /**
