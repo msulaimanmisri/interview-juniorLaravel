@@ -8,7 +8,10 @@
         <div class="col-lg-6 mx-auto">
             <div class="card p-4 shadow-sm">
 
-                <form action="" method="" class="form-group">
+                <form action="{{ route('staff.index') }}/{{ $staff->id }}" method="POST" class="form-group">
+
+                    @csrf
+                    @method('PATCH')
 
                     <label for="first_name" class="form-label">{{ ucwords('first name') }}</label>
                     <input type="text" name="first_name" id="first_name" class="form-control mb-3"
@@ -29,7 +32,8 @@
                     <input type="phone" name="phone" id="phone" class="form-control mb-3" value="{{ $staff->phone }}">
 
                     <div>
-                        <a href="/staff/{{ $staff->id }}/edit" class="btn btn-primary">Edit staff details</a>
+                        <button class="btn btn-primary" type="submit">Save changes</button>
+                        <a href="{{ route('staff.index') }}" class="btn btn-outline-secondary"> Cancel </a>
                     </div>
 
                 </form>
