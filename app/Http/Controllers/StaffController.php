@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Staff;
+use App\Models\Company;
 use Illuminate\Http\Request;
 
 class StaffController extends Controller
@@ -15,7 +16,13 @@ class StaffController extends Controller
     public function index()
     {
         $staff = Staff::all();
-        return view('staff.index')->with('staff', $staff);
+        $company = Company::all();
+        return view('staff.index')->with(
+            [
+                'staff' => $staff,
+                'company' => $company
+            ]
+        );
     }
 
     /**
@@ -25,7 +32,8 @@ class StaffController extends Controller
      */
     public function create()
     {
-        return view('staff.create');
+        $company = Company::all();
+        return view('staff.create')->with('company', $company);
     }
 
     /**

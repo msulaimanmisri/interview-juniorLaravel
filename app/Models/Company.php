@@ -12,4 +12,8 @@ class Company extends Model
     protected $fillable = ['name', 'email', 'logo', 'website'];
 
     // hasOne staff
+    public function staff()
+    {
+        return $this->hasOne('App\Models\Staff');
+    }
 }

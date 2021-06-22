@@ -18,7 +18,11 @@
                     <input type="last_name" name="last_name" id="last_name" class="form-control mb-3">
 
                     <label for="company" class="form-label">{{ ucwords('company') }}</label>
-                    <input type="company" name="company" id="company" class="form-control mb-3">
+                    <select class="form-select mb-3" name="company" id="company">
+                        @foreach ($company as $data)
+                        <option value="{{ $data->name }}">{{ ucwords($data->name) }}</option>
+                        @endforeach
+                    </select>
 
                     <label for="email" class="form-label">{{ ucwords('email') }}</label>
                     <input type="email" name="email" id="email" class="form-control mb-3">
