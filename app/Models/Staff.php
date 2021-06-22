@@ -12,4 +12,8 @@ class Staff extends Model
     protected $guarded = [];
 
     // belongsTo company
+    public function company()
+    {
+        return $this->belongsTo('App\Models\Company');
+    }
 }
