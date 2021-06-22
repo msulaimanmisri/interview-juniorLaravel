@@ -64,9 +64,10 @@ class CompanyController extends Controller
      * @param  \App\Models\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function edit(Company $company)
+    public function edit($id)
     {
-        //
+        $company = Company::find($id);
+        return view('company.edit')->with(['company' => $company]);
     }
 
     /**
@@ -76,10 +77,18 @@ class CompanyController extends Controller
      * @param  \App\Models\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Company $company)
+    public function update(Request $request, $id)
     {
-        //
+        $company = Company::where('id', $id)->update([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'logo' => $request->input('logo'),
+            'website' => $request->input('website'),
+        ]);
+
+        return redirect('/company');
     }
+
 
     /**
      * Remove the specified resource from storage.
