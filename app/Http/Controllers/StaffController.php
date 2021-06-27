@@ -17,7 +17,12 @@ class StaffController extends Controller
     {
         $staff = Staff::paginate(5);
         $company = Company::all();
-        return view('staff.index')->with('staff', $staff)->with('company', $company);
+        return view('staff.index')->with(
+            [
+                'staff' => $staff,
+                'company' => $company
+            ]
+        );
     }
 
     /**

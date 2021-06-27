@@ -28,16 +28,11 @@
                 <td>{{ $loop->iteration }}</td>
                 <td>{{ $data->first_name }}</td>
                 <td>{{ $data->last_name }}</td>
-
-                @foreach ($company as $comp)
-                <td>{{ ucwords($comp->name) }}</td>
-                @endforeach
-
+                <td>{{ $data->company }}</td>
                 <td>{{ $data->email }}</td>
                 <td>{{ $data->phone }}</td>
                 <td>
                     <a href="/staff/{{ $data->id }}" class="btn btn-primary btn-sm"> View </a>
-
                     <form action="/staff/{{ $data->id }}" method="POST">
                         @csrf
                         @method('DELETE')
