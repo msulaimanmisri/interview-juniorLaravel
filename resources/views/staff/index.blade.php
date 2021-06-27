@@ -28,7 +28,11 @@
                 <td>1</td>
                 <td>{{ $data->first_name }}</td>
                 <td>{{ $data->last_name }}</td>
-                <td>{{ $data->company }}</td>
+
+                @foreach ($company as $comp)
+                <td>{{ ucwords($comp->name) }}</td>
+                @endforeach
+
                 <td>{{ $data->email }}</td>
                 <td>{{ $data->phone }}</td>
                 <td>
