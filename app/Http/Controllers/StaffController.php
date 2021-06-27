@@ -17,12 +17,7 @@ class StaffController extends Controller
     {
         $staff = Staff::all();
         $company = Company::all();
-        return view('staff.index')->with(
-            [
-                'staff' => $staff,
-                'company' => $company
-            ]
-        );
+        return view('staff.index')->with('staff', $staff)->with('company', $company);
     }
 
     /**

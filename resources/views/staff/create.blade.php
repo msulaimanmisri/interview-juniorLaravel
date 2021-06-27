@@ -20,7 +20,7 @@
                     <label for="company" class="form-label">{{ ucwords('company') }}</label>
                     <select class="form-select mb-3" name="company" id="company">
                         @foreach ($company as $data)
-                        <option value="{{ $data->name }}">{{ ucwords($data->name) }}</option>
+                        <option value="{{ $data->id }}">{{ ucwords($data->name) }}</option>
                         @endforeach
                     </select>
 
