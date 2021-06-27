@@ -24,7 +24,7 @@
         <tbody>
             @foreach ($companies as $company)
             <tr>
-                <td>1</td>
+                <td>{{ $loop->iteration }}</td>
                 <td>{{ $company->name }}</td>
                 <td>{{ $company->email }}</td>
                 <td>{{ $company->logo }}</td>

@@ -25,7 +25,7 @@
         <tbody>
             @foreach ($staff as $data)
             <tr>
-                <td>1</td>
+                <td>{{ $loop->iteration }}</td>
                 <td>{{ $data->first_name }}</td>
                 <td>{{ $data->last_name }}</td>
 
@@ -48,6 +48,11 @@
             @endforeach
         </tbody>
     </table>
+
+    <div class="container">
+        {{ $staff->links() }}
+    </div>
+
 
 </div>
 @endsection
