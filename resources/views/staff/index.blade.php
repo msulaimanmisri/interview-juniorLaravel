@@ -28,7 +28,7 @@
                 <td>{{ $loop->iteration }}</td>
                 <td>{{ $data->first_name }}</td>
                 <td>{{ $data->last_name }}</td>
-                <td>{{ $data->company }}</td>
+                <td>{{ $data->company->id }}</td>
                 <td>{{ $data->email }}</td>
                 <td>{{ $data->phone }}</td>
                 <td>

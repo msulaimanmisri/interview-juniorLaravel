@@ -15,7 +15,7 @@ class StaffController extends Controller
      */
     public function index()
     {
-        $staff = Staff::paginate(5);
+        $staff = Staff::with('company')->paginate(5);
         $company = Company::all();
         return view('staff.index')->with(
             [

@@ -14,6 +14,7 @@ class Staff extends Model
     // belongsTo company
     public function company()
     {
+        // return $this->belongsTo(Company::class, 'companies', 'company_id');
         return $this->belongsTo('App\Models\Company');
     }
 }

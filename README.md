@@ -13,3 +13,14 @@
 -   WordPress Developer. Right now exploring Laravel to learn how to build a complex applications.
 -   Can seat for a long time in-front of laptop to coding and debugging.
 -   I rather refactor others code than finding what's the problem (if the project passed to me as lead developer). If I work with team, I'm will not refactor the code unless the coder don't know how to solve the problem.
+
+## Tasks
+
+1. Create login page using laravel auth
+2. create database seed and make admin can login using admin@admin.com
+3. CRUD Functionality for 2 menus (company and staff)
+4. Create company migration file. And consists of name, email, logo, & company website
+5. Create staff migration file consists of first name, last name, email, phone, and company
+6. make company (in staff model) as foreign key.
+7. create controller using Laravel resource.
+8. Create table with pagination
