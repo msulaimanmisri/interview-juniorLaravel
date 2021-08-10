@@ -24,3 +24,13 @@
 6. make company (in staff model) as foreign key.
 7. create controller using Laravel resource.
 8. Create table with pagination
+
+![1  login](https://user-images.githubusercontent.com/47172118/128790379-259b5637-ffab-4c52-9fc4-a425ee5cf550.PNG)
+
+![2  List of company](https://user-images.githubusercontent.com/47172118/128790405-dcec55d7-6134-466d-982f-2ad92f491968.PNG)
+
+![3  Create new company](https://user-images.githubusercontent.com/47172118/128790410-340293c0-78cd-40c0-a2c6-9f547dd66e22.PNG)
+
+![4  List of stafs](https://user-images.githubusercontent.com/47172118/128790412-b0bcc1a0-5a31-47f1-ad94-d0344e775cdc.PNG)
+
+![5  Add new staff](https://user-images.githubusercontent.com/47172118/128790413-e13fb64c-3c8f-45a9-ba86-20a58afb2527.PNG)
